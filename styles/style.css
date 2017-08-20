@@ -1,0 +1,294 @@
+@font-face {
+    font-family: YanoneKaffeesatz-Bold;
+    src: url(/assets/fonts/YanoneKaffeesatz-Bold.ttf);
+}
+@font-face {
+    font-family: YanoneKaffeesatz-Regular;
+    src: url(/assets/fonts/yanonekaffeesatz-regular.woff);
+}
+@font-face {
+    font-family: YanoneKaffeesatz-Light;
+    src: url(/assets/fonts/yanonekaffeesatz-Light.ttf);
+}
+
+body {
+    font-family: YanoneKaffeesatz-Regular;
+    color:#000;
+    font-size:17px;
+    background-color:#f7f7f7;
+    padding-bottom:50px;
+}
+h1 {
+    font-size:40pt;
+    font-family: YanoneKaffeesatz-Bold;
+    text-transform: uppercase;
+}
+h4 {
+    font-size:20px;
+    letter-spacing: 1px;
+}
+a {
+    color:#bebebe;
+}
+/********* NAVBAR *********/
+.navbar {
+    font-family: YanoneKaffeesatz-Light;
+    letter-spacing: 1px;
+}
+.navbar.navbar-inverse .nav > li > a {
+    margin:0px 15px;
+    text-transform: uppercase;
+    color:#fff;
+    font-size:17px;
+
+} 
+
+.navbar.navbar-inverse .nav > li.active > a {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    margin: 15px 25px 0px 25px;
+    padding: 0px 0px 0px 0px;
+}
+
+.navbar-inverse {
+    background-color: #000;
+    border-color: #000;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size:40px;
+}
+.navbar-form .input-group {
+    width:100%;
+    border-radius: 0px;
+}
+.navbar-form .input-group .btn-default, .navbar-form .input-group input{
+    border-color:#fff;
+    border-radius: 0px;
+    color:#a5a5a5;
+}
+.navbar-form .input-group input{
+    border: none;
+}
+
+.navbar-form .input-group input::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: uppercase;
+}
+.navbar-form .input-group input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: uppercase;
+}
+.navbar-form .input-group input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: uppercase;
+}
+.navbar-form .input-group input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: uppercase;
+}
+
+.navbar .suit{
+    color:#fff;
+    font-size: 20px;
+    padding: 15px 15px 0px 15px;
+    
+}
+.navbar .suit .counter{
+    font-size: 15px;
+    vertical-align: super;
+    font-family: YanoneKaffeesatz-Bold;
+}
+/*-------- /NAVBAR ---------*/
+
+
+/********* HEADER-IMAGE *********/
+header {
+    background:     /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+        rgba(0, 0, 0, 0.55), 
+        rgba(0, 0, 0, 0.55)
+    ),url(/assets/asset1.jpg) ; 
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    width: 100%;
+    min-height: 400px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+ 
+}
+header .header-inner{
+    top: 150px;
+    position: relative;
+    background:     /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.40), 
+      rgba(0, 0, 0, 0.40)
+    ) ; 
+    text-transform: uppercase;
+    padding:25px;
+}
+header .header-inner h1{
+    font-size:50pt;
+    letter-spacing: 3px;
+    margin: 0px;
+}
+header .header-inner h2{
+    font-size:30pt;
+    letter-spacing: 3px;
+    margin-top:0px;
+}
+/*-------- /HEADER-IMAGE ---------*/
+
+/********* FORM-DETAILS *********/
+#form-details h1 {
+
+}
+/*-------- /FORM-DETAILS ---------*/
+
+/********* FAQ *********/
+#faq {
+    background:url(/assets/img2.png) ; 
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    width: 100%;
+    min-height: 400px;
+
+    position: relative;
+    padding:60px 0px;
+}
+#faq .container {
+    background-color: #fff;
+    height:100%;
+    padding: 10px 35px;
+}
+#faq h3{
+    font-family: YanoneKaffeesatz-Bold;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+#faq ul{
+    color:#9f9f9f;
+    margin-bottom:30px;
+    padding-left: 0px;
+    list-style-position: inside;
+}
+#faq .content{
+    color:#9f9f9f;
+    margin:30px 0px;
+}
+#faq .content p{
+    margin:0px;
+}
+
+#faq .underline{
+    text-decoration: underline;
+}
+
+/*-------- /FAQ ---------*/
+
+/********* FOOTER *********/
+footer{
+    background-color:#fff;
+    padding:40px 0px;
+}
+footer .container{
+    border-top:1px solid #eaeaea;
+    padding-top:20px;
+    color:#9f9f9f;
+}
+footer h4{
+    text-transform: uppercase;
+    color:#000;
+    margin-bottom:20px;
+}
+footer ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0px;
+}
+footer .social-network div {
+    padding-left:0px;
+}
+footer .social-network div i{
+    margin-right:10px;
+    font-size: 19px;;
+    font-size: 25px;
+    vertical-align: middle;
+}
+/*-------- /FOOTER ---------*/
+
+
+
+
+
+
+@media (max-width:767px) { 
+    /********* LEFT-SLIDER *********/
+	#slide-nav .container {
+        margin: 0!important;
+        padding: 0!important;
+        height:100%;
+	}
+	#slide-nav .navbar-header {
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+	#slide-nav .navbar.slide-active {
+	    position: absolute;
+	    width: 80%;
+	    top: -1px;
+	    z-index: 1000;
+	}
+	#slide-nav #slidemenu {
+	    background: #f7f7f7;
+	    left: -100%;
+	    width: 80%;
+	    min-width: 0;
+	    position: absolute;
+	    padding-left: 0;
+	    z-index: 2;
+	    top: -8px;
+	    margin: 0;
+	}
+	#slide-nav #slidemenu .navbar-nav {
+	    min-width: 0;
+	    width: 100%;
+	    margin: 0;
+	}
+	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+	    min-width: 0;
+	    width: 80%;
+	}
+	#slide-nav {
+	    border-top: 0
+	}
+	#slide-nav.navbar-inverse #slidemenu {
+	    background: #000
+	}
+	#navbar-height-col {
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+        bottom:0;
+	    width: 80%;
+	    left: -80%;
+	    background: #000;
+	}
+	#navbar-height-col.inverse {
+	    background: #000;
+	    z-index: 1;
+	    border: 0;
+    }
+    /*-------- /LEFT-SLIDER ---------*/
+}
+
+
+/* PLACEHOLDER FIX */
+.placeholder-label {
+    display:none;
+}
+html.no-placeholder .placeholder-label {
+    display: block;
+}
