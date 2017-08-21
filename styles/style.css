@@ -1,14 +1,14 @@
 @font-face {
     font-family: YanoneKaffeesatz-Bold;
-    src: url(/assets/fonts/YanoneKaffeesatz-Bold.ttf);
+    src: url(/assets/fonts/yanonekaffeesatz-bold-webfont.woff);
 }
 @font-face {
     font-family: YanoneKaffeesatz-Regular;
-    src: url(/assets/fonts/yanonekaffeesatz-regular.woff);
+    src: url(/assets/fonts/yanonekaffeesatz-regular-webfont.woff);
 }
 @font-face {
     font-family: YanoneKaffeesatz-Light;
-    src: url(/assets/fonts/yanonekaffeesatz-Light.ttf);
+    src: url(/assets/fonts/yanonekaffeesatz-light-webfont.woff);
 }
 
 body {
@@ -30,6 +30,29 @@ h4 {
 a {
     color:#bebebe;
 }
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    outline: none;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
 /********* NAVBAR *********/
 .navbar {
     font-family: YanoneKaffeesatz-Light;
@@ -46,7 +69,7 @@ a {
 .navbar.navbar-inverse .nav > li.active > a {
     text-decoration: none;
     border-bottom: 1px solid #fff;
-    margin: 15px 25px 0px 25px;
+    margin: 15px 25px 0px 30px;
     padding: 0px 0px 0px 0px;
 }
 
@@ -101,14 +124,14 @@ a {
 
 /********* HEADER-IMAGE *********/
 header {
-    background:     /* top, transparent red, faked with gradient */ 
+    background: 
     linear-gradient(
         rgba(0, 0, 0, 0.55), 
         rgba(0, 0, 0, 0.55)
     ),url(/assets/asset1.jpg) ; 
-    background-size:     cover;                      /* <------ */
+    background-size:     cover; 
     background-repeat:   no-repeat;
-    background-position: center center;              /* optional, center the image */
+    background-position: center center;          
     width: 100%;
     min-height: 400px;
     color: #fff;
@@ -118,8 +141,9 @@ header {
 }
 header .header-inner{
     top: 150px;
+    /* bottom:150px; */
     position: relative;
-    background:     /* top, transparent red, faked with gradient */ 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.40), 
       rgba(0, 0, 0, 0.40)
@@ -140,22 +164,88 @@ header .header-inner h2{
 /*-------- /HEADER-IMAGE ---------*/
 
 /********* FORM-DETAILS *********/
-#form-details h1 {
 
+#form-details .form-control {
+    font-family: YanoneKaffeesatz-Bold;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border:none;
+    color:#003a60;
 }
+#form-details .form-control.incorrect {
+    border:1px solid red;
+    color:red;
+}
+#form-details .btn-primary.active{
+    background-color:#003a60;
+
+} 
+#form-details .uploadfile{
+    padding:0;
+} 
+#form-details .btn{
+    border:none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+} 
+#form-details .btn-group, #form-details .form-control{
+    margin-bottom:15px !important;
+}
+#form-details .submit{
+    margin-bottom:15px !important;
+    background-color:#005c9d;
+    color:#fff;
+}
+#form-details{
+    padding-bottom:30px;
+}
+
+/* ::-webkit-input-placeholder {
+    color:#003a60 !important;
+}
+
+::-moz-placeholder {
+    color:#003a60 !important;
+}
+
+::-ms-placeholder {
+    color:#003a60 !important;
+}
+
+::placeholder {
+    color:#003a60 !important;
+} */
 /*-------- /FORM-DETAILS ---------*/
 
 /********* FAQ *********/
 #faq {
-    background:url(/assets/img2.png) ; 
-    background-size:     cover;                      /* <------ */
+    background:url(/assets/img2.jpg) ; 
+    background-size:     cover;      
     background-repeat:   no-repeat;
-    background-position: center center;              /* optional, center the image */
+    background-position: center center;       
     width: 100%;
     min-height: 400px;
 
     position: relative;
     padding:60px 0px;
+}
+#faq .backtotop i {
+    font-size:8px;
+}
+#faq .backtotop {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    background-color:#fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: YanoneKaffeesatz-Light;
+    padding:5px 15px;
 }
 #faq .container {
     background-color: #fff;
@@ -259,7 +349,7 @@ footer .social-network div i{
 	}
 	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
 	    min-width: 0;
-	    width: 80%;
+        width: 80%;
 	}
 	#slide-nav {
 	    border-top: 0
@@ -278,10 +368,16 @@ footer .social-network div i{
 	}
 	#navbar-height-col.inverse {
 	    background: #000;
-	    z-index: 1;
+	    z-index: 10;
 	    border: 0;
     }
     /*-------- /LEFT-SLIDER ---------*/
+    header .header-inner {
+        top: 90px;
+    }
+    .navbar.navbar-inverse .nav > li.active > a {
+        margin-bottom: 10px;
+    }
 }
 
 
